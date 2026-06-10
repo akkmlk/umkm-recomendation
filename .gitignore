@@ -1,10 +1,45 @@
-node_modules/
+# Virtual Environment
+venv/
+.env
+.vscode/
+.idea/
 
+# Python Cache
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
 
+
+# Flask Instance
 instance/
-myenv
-.env.*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# MyPy
+.mypy_cache/
+
+# Dataset sementara
+dataset/temp/
+dataset/cache/
+
+# SQLite
+*.sqlite
+*.db
