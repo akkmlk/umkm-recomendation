@@ -1,0 +1,308 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="w-full h-fit flex flex-col gap-y-6.5">
+    <div class="w-fit h-fit flex gap-x-3 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-icon lucide-arrow-left text-dark"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        <span class="text-slate-400 text-xl">
+            <a href="" class="no-underline">Home</a>
+            -
+            <a href="" class="no-underline">Detail Produk</a>
+        </span>
+    </div>
+    <div class="w-full h-[761px] flex gap-x-5">
+        <div class="w-[45%] h-full flex items-end overflow-hidden bg-dark relative py-1.25 rounded-[15px]">
+            <img src="{{ url_for('static', filename='images/parfume-detail.png') }}" class="absolute w-full h-full z-1" alt="">
+            <div class="w-full h-fit flex justify-around items-center gap-3 z-2 px-1">
+                <div class="w-[33%] h-[31%] rounded-[15px] border-4 border-[#C4C4C4]">
+                    <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center" alt="">
+                </div>
+                <div class="w-[33%] h-[31%] rounded-[15px] border-4 border-[#C4C4C4]">
+                    <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center" alt="">
+                </div>
+                <div class="w-[33%] h-[31%] rounded-[15px] border-4 border-[#C4C4C4]">
+                    <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="w-[55%] h-full flex flex-col justify-between px-3 py-3">
+            <div class="w-full h-fit flex flex-col items-end gap-y-4">
+                <span class="w-fit h-fit bg-dark rounded-[70px] px-6.5 py-2 text-secondary font-medium text-lg text-center">Nama Brand</span>
+                <div class="w-full h-fit flex flex-col gap-1">
+                    <div class="w-full h-fit flex flex-col">
+                        <p id="category" class="text-slate-400 text-lg mb-0 font-medium">Parfume</p>
+                        <p id="name" class="text-dark text-[32px] font-medium mb-0">Parfume Eu De Light</p>
+                    </div>
+                    <p class="text-dark text-[28px] font-bold mb-0">Rp. 5.000.000</p>
+                </div>
+                <div class="w-full h-fit flex gap-x-2.5 items-center">
+                    <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star text-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                        <p class="text-dark text-sm font-medium" id="review">5 of 76 Reviews</p>
+                    </div>
+                    <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                        <p class="text-dark text-sm font-medium">3002</p>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-col">
+                    <h3 class="text-dark text-[28px] font-semibold mb-0">Deskripsi</h3>
+                    <p class="text-dark text-lg font-normal">This enchanting set comes in a specially handcrafted blue box- and includes a selection of fragrances from the Blu Mediterraneo collection. A symbol of the Italian Mediterranean and the island of Capri- Arancia di Capri is sunny- relaxing- and carefree. <span id="expand-text" class="font-semibold">Lihat lebih banyak</span></p>
+                </div>
+                <div class="w-full h-fit flex flex-col">
+                    <h3 class="text-dark text-[28px] font-semibold">Cara Pakai</h3>
+                    <p class="text-dark text-lg font-normal">Suggested Usage:-Fragrance is intensified by the warmth of your own body. Apply in the creases of your knees and elbows for a longer-lasting- stronger scent. -After applying- avoid rubbing or dabbing skin. <span id="expand-text" class="font-semibold">Lihat lebih banyak</span></p>
+                </div>
+                <div class="w-full h-fit flex flex-col">
+                    <h3 class="text-dark text-[28px] font-semibold">Bahan Baku</h3>
+                    <p class="text-dark text-lg font-normal">Alcohol Denat. (Sd Alcohol 39-C)- Water- Fragrance- Linalool- Geraniol- Coumarin- Benzyl Alcohol.</p>
+                </div>
+            </div>
+            <div class="w-full h-fit flex justify-center items-center gap-2.5">
+                <a href="" class="w-full h-fit bg-dark rounded-[5px] px-5 py-3.75 text-secondary font-medium text-lg no-underline text-center">Beli Sekarang</a>
+                <div class="w-fit h-fit flex gap-x-2.5 items-center">
+                    <div class="w-fit h-fit p-3.75 rounded-[5px] border border-pink">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                    </div>
+                    <div class="w-fit h-fit p-3.75 rounded-[5px] border border-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart text-dark"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-fit flex flex-col gap-y-3">
+        <h3 class="text-dark text-[28px] font-semibold mb-0">Produk yang Mungkin Kamu Suka</h3>
+        <div class="w-full h-fit flex flex-nowrap gap-4.25 overflow-x-auto snap-x pb-4 snap-mandatory cursor-grab select-none" id="product-slider">
+            <div class="shrink-0 snap-center border border-dark w-[304px] h-[390px] p-3.75 rounded-[15px] stroke-dark stroke-[0.5px] flex flex-col justify-between items-center">
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-41.75 bg-dark rounded-[15px] overflow-hidden flex items-center justify-center">
+                        <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="border border-blue-600" alt="">
+                        <!-- <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center border border-blue-600" alt=""> -->
+                    </div>
+                    <div class="w-full h-fit flex flex-col gap-2">
+                        <div class="w-full h-fit flex flex-col gap-x-1.25">
+                            <p id="category" class="text-slate-400 text-14 mb-0 font-medium">Parfume</p>
+                            <p id="name" class="text-dark text-[24px] font-medium mb-0">Parfume Eu De Light</p>
+                        </div>
+                        <p class="text-dark text-[24px] font-bold mb-0">Rp. 5.000.000</p>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-fit flex gap-x-2.5 items-center">
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star text-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                            <p class="text-dark text-sm font-medium">5</p>
+                        </div>
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            <p class="text-dark text-sm font-medium">3002</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit flex justify-center items-center gap-2.5">
+                        <a href="" class="w-full h-fit bg-dark rounded-[5px] px-3 py-1.75 text-secondary font-medium text-lg no-underline text-center">Beli Sekarang</a>
+                        <div class="w-fit h-fit flex gap-x-2.5 items-center">
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            </div>
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart text-dark"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shrink-0 snap-center border border-dark w-[304px] h-[390px] p-3.75 rounded-[15px] stroke-dark stroke-[0.5px] flex flex-col justify-between items-center">
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-41.75 bg-dark rounded-[15px] overflow-hidden flex items-center justify-center">
+                        <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="border border-blue-600" alt="">
+                        <!-- <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center border border-blue-600" alt=""> -->
+                    </div>
+                    <div class="w-full h-fit flex flex-col gap-2">
+                        <div class="w-full h-fit flex flex-col gap-x-1.25">
+                            <p id="category" class="text-slate-400 text-14 mb-0 font-medium">Parfume</p>
+                            <p id="name" class="text-dark text-[24px] font-medium mb-0">Parfume Eu De Light</p>
+                        </div>
+                        <p class="text-dark text-[24px] font-bold mb-0">Rp. 5.000.000</p>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-fit flex gap-x-2.5 items-center">
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star text-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                            <p class="text-dark text-sm font-medium">5</p>
+                        </div>
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            <p class="text-dark text-sm font-medium">3002</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit flex justify-center items-center gap-2.5">
+                        <a href="" class="w-full h-fit bg-dark rounded-[5px] px-3 py-1.75 text-secondary font-medium text-lg no-underline text-center">Beli Sekarang</a>
+                        <div class="w-fit h-fit flex gap-x-2.5 items-center">
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            </div>
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart text-dark"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shrink-0 snap-center border border-dark w-[304px] h-[390px] p-3.75 rounded-[15px] stroke-dark stroke-[0.5px] flex flex-col justify-between items-center">
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-41.75 bg-dark rounded-[15px] overflow-hidden flex items-center justify-center">
+                        <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="border border-blue-600" alt="">
+                        <!-- <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center border border-blue-600" alt=""> -->
+                    </div>
+                    <div class="w-full h-fit flex flex-col gap-2">
+                        <div class="w-full h-fit flex flex-col gap-x-1.25">
+                            <p id="category" class="text-slate-400 text-14 mb-0 font-medium">Parfume</p>
+                            <p id="name" class="text-dark text-[24px] font-medium mb-0">Parfume Eu De Light</p>
+                        </div>
+                        <p class="text-dark text-[24px] font-bold mb-0">Rp. 5.000.000</p>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-fit flex gap-x-2.5 items-center">
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star text-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                            <p class="text-dark text-sm font-medium">5</p>
+                        </div>
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            <p class="text-dark text-sm font-medium">3002</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit flex justify-center items-center gap-2.5">
+                        <a href="" class="w-full h-fit bg-dark rounded-[5px] px-3 py-1.75 text-secondary font-medium text-lg no-underline text-center">Beli Sekarang</a>
+                        <div class="w-fit h-fit flex gap-x-2.5 items-center">
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            </div>
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart text-dark"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shrink-0 snap-center border border-dark w-[304px] h-[390px] p-3.75 rounded-[15px] stroke-dark stroke-[0.5px] flex flex-col justify-between items-center">
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-41.75 bg-dark rounded-[15px] overflow-hidden flex items-center justify-center">
+                        <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="border border-blue-600" alt="">
+                        <!-- <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center border border-blue-600" alt=""> -->
+                    </div>
+                    <div class="w-full h-fit flex flex-col gap-2">
+                        <div class="w-full h-fit flex flex-col gap-x-1.25">
+                            <p id="category" class="text-slate-400 text-14 mb-0 font-medium">Parfume</p>
+                            <p id="name" class="text-dark text-[24px] font-medium mb-0">Parfume Eu De Light</p>
+                        </div>
+                        <p class="text-dark text-[24px] font-bold mb-0">Rp. 5.000.000</p>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-fit flex gap-x-2.5 items-center">
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star text-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                            <p class="text-dark text-sm font-medium">5</p>
+                        </div>
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            <p class="text-dark text-sm font-medium">3002</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit flex justify-center items-center gap-2.5">
+                        <a href="" class="w-full h-fit bg-dark rounded-[5px] px-3 py-1.75 text-secondary font-medium text-lg no-underline text-center">Beli Sekarang</a>
+                        <div class="w-fit h-fit flex gap-x-2.5 items-center">
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            </div>
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart text-dark"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shrink-0 snap-center border border-dark w-[304px] h-[390px] p-3.75 rounded-[15px] stroke-dark stroke-[0.5px] flex flex-col justify-between items-center">
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-41.75 bg-dark rounded-[15px] overflow-hidden flex items-center justify-center">
+                        <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="border border-blue-600" alt="">
+                        <!-- <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center border border-blue-600" alt=""> -->
+                    </div>
+                    <div class="w-full h-fit flex flex-col gap-2">
+                        <div class="w-full h-fit flex flex-col gap-x-1.25">
+                            <p id="category" class="text-slate-400 text-14 mb-0 font-medium">Parfume</p>
+                            <p id="name" class="text-dark text-[24px] font-medium mb-0">Parfume Eu De Light</p>
+                        </div>
+                        <p class="text-dark text-[24px] font-bold mb-0">Rp. 5.000.000</p>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-fit flex gap-x-2.5 items-center">
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star text-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                            <p class="text-dark text-sm font-medium">5</p>
+                        </div>
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            <p class="text-dark text-sm font-medium">3002</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit flex justify-center items-center gap-2.5">
+                        <a href="" class="w-full h-fit bg-dark rounded-[5px] px-3 py-1.75 text-secondary font-medium text-lg no-underline text-center">Beli Sekarang</a>
+                        <div class="w-fit h-fit flex gap-x-2.5 items-center">
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            </div>
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart text-dark"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shrink-0 snap-center border border-dark w-[304px] h-[390px] p-3.75 rounded-[15px] stroke-dark stroke-[0.5px] flex flex-col justify-between items-center">
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-41.75 bg-dark rounded-[15px] overflow-hidden flex items-center justify-center">
+                        <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="border border-blue-600" alt="">
+                        <!-- <img src="{{ url_for('static', filename='images/parfume_product.png') }}" class="w-full h-full object-cover object-center border border-blue-600" alt=""> -->
+                    </div>
+                    <div class="w-full h-fit flex flex-col gap-2">
+                        <div class="w-full h-fit flex flex-col gap-x-1.25">
+                            <p id="category" class="text-slate-400 text-14 mb-0 font-medium">Parfume</p>
+                            <p id="name" class="text-dark text-[24px] font-medium mb-0">Parfume Eu De Light</p>
+                        </div>
+                        <p class="text-dark text-[24px] font-bold mb-0">Rp. 5.000.000</p>
+                    </div>
+                </div>
+                <div class="w-full h-fit flex flex-col gap-y-2.5">
+                    <div class="w-full h-fit flex gap-x-2.5 items-center">
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star text-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                            <p class="text-dark text-sm font-medium">5</p>
+                        </div>
+                        <div class="w-fit h-fit flex gap-x-1.25 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            <p class="text-dark text-sm font-medium">3002</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit flex justify-center items-center gap-2.5">
+                        <a href="" class="w-full h-fit bg-dark rounded-[5px] px-3 py-1.75 text-secondary font-medium text-lg no-underline text-center">Beli Sekarang</a>
+                        <div class="w-fit h-fit flex gap-x-2.5 items-center">
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart text-pink"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+                            </div>
+                            <div class="w-fit h-fit p-1.75 rounded-[5px] border border-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart text-dark"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
