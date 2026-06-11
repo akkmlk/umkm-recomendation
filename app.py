@@ -5,7 +5,7 @@ from flask.cli import with_appcontext
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 from extensions import db
-
+from routes.pages import pages
 load_dotenv()
 
 app = Flask(os.environ.get("APP_NAME"))
@@ -141,6 +141,7 @@ def seed_db():
     except Exception as e:
         db.session.rollback()
         print(f"Terjadi kesalahan saat seeding: {e}")
+app.register_blueprint(pages)
 
 if __name__ == "__main__":
     app.run(debug=True)

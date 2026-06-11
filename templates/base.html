@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='src/output.css') }}" rel="stylesheet">
+</head>
+<body class="font-sans px-10.5 py-3.75 bg-secondary gap-y-6.5 border border-violet-600 w-full flex flex-col">
+    <!-- gap-y-15.5 -->
+    <header class="h-fit w-full bg-red-800">
+        {% include "components/navbar.html" %}
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer></footer>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

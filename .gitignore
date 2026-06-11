@@ -43,3 +43,7 @@ dataset/cache/
 # SQLite
 *.sqlite
 *.db
+
+# Node Modules & Tailwind
+node_modules/
+
